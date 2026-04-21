@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NutriNudge AI | Eat Better. Live Smarter.</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="mesh-bg"></div>
+
+    <!-- Header / Nav -->
+    <header>
+        <div class="logo">
+            <i class="fa-solid fa-leaf text-accent"></i> NutriNudge
+        </div>
+        <nav>
+            <a href="#analyzer" class="btn btn-primary">Try Now</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="badge">Next Gen Health Intelligence</div>
+            <h1>Predict cravings.<br>Prevent relapses. <br><span class="text-gradient">Eat smarter.</span></h1>
+            <p>Your AI nutrition coach that understands your mood, sleep, and lifestyle to deliver precision food recommendations when you need them most.</p>
+            
+            <div class="hero-cta">
+                <a href="#analyzer" class="btn btn-primary">Start Analysis <i class="fa-solid fa-arrow-right"></i></a>
+                <a href="#chat" class="btn btn-outline" style="margin-left: 1rem;">Ask AI Coach</a>
+            </div>
+            
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-num">94%</span>
+                    <span class="stat-text">Craving accuracy</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-num">3x</span>
+                    <span class="stat-text">Better adherence</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-num">24/7</span>
+                    <span class="stat-text">AI Coach</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="hero-visual">
+            <div class="hero-image-container">
+                <!-- Using a highly premium 3D abstract visual to represent the AI and Next Gen Health Intelligence -->
+                <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80" alt="NutriNudge AI Intelligence" class="hero-image">
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Current Apps Fail -->
+    <section class="why-fail">
+        <div class="section-header">
+            <h2>Why calorie trackers <span class="text-accent">fail</span> you.</h2>
+            <p>Most apps only tell you what you ate. We tell you what to eat next based on your biology.</p>
+        </div>
+        <div class="grid-3">
+            <div class="premium-card">
+                <div class="icon-box"><i class="fa-solid fa-calculator"></i></div>
+                <h3>They are reactive</h3>
+                <p>Tracking calories after you eat them doesn't stop cravings when you're stressed.</p>
+            </div>
+            <div class="premium-card">
+                <div class="icon-box"><i class="fa-solid fa-robot"></i></div>
+                <h3>They lack context</h3>
+                <p>A 500-calorie meal is different at 2 PM vs 2 AM when you've had 4 hours of sleep.</p>
+            </div>
+            <div class="premium-card">
+                <div class="icon-box"><i class="fa-solid fa-brain"></i></div>
+                <h3>They ignore behavior</h3>
+                <p>Willpower is finite. We leverage behavioral science to give you smart swaps.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Analyzer Section -->
+    <section id="analyzer" class="analyzer-section">
+        <div class="section-header">
+            <h2><i class="fa-solid fa-bolt text-accent"></i> Context Engine</h2>
+            <p>Enter your current state to get a real-time behavioral recommendation.</p>
+        </div>
+        
+        <div class="analyzer-container">
+            <div class="analyzer-form">
+                <form id="contextForm">
+                    <div class="form-grid">
+                        <div class="input-group">
+                            <label>Mood</label>
+                            <select id="mood" required>
+                                <option value="neutral">Neutral</option>
+                                <option value="stressed">Stressed 😰</option>
+                                <option value="sad">Sad 😢</option>
+                                <option value="happy">Happy 😊</option>
+                                <option value="energetic">Energetic ⚡</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <label>Sleep (Hours last night)</label>
+                            <input type="number" id="sleep" value="7" min="0" max="14" required>
+                        </div>
+                        <div class="input-group">
+                            <label>Hunger Level</label>
+                            <select id="hunger" required>
+                                <option value="low">Low (Just snacking)</option>
+                                <option value="medium">Medium (Ready for meal)</option>
+                                <option value="high">High (Starving)</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <label>Primary Goal</label>
+                            <select id="goal" required>
+                                <option value="maintain">Maintain Health</option>
+                                <option value="fat loss">Fat Loss</option>
+                                <option value="muscle">Muscle Gain</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <label>Time of Day</label>
+                            <select id="timeOfDay" required>
+                                <option value="morning">Morning</option>
+                                <option value="afternoon">Afternoon</option>
+                                <option value="evening">Evening</option>
+                                <option value="late night">Late Night</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <label>Hydration</label>
+                            <select id="hydration" required>
+                                <option value="high">High (Drank plenty)</option>
+                                <option value="moderate">Moderate</option>
+                                <option value="low">Low (Thirsty)</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <label>Activity Level Today</label>
+                            <select id="activity" required>
+                                <option value="sedentary">Sedentary</option>
+                                <option value="active">Active (10k+ steps)</option>
+                                <option value="intense">Intense (Workout)</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <label>Budget</label>
+                            <select id="budget" required>
+                                <option value="low">Low ($)</option>
+                                <option value="medium">Medium ($$)</option>
+                                <option value="high">High ($$$)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100" id="analyzeBtn" style="padding: 1rem; border-radius: 12px;">Generate Intelligence <i class="fa-solid fa-microchip"></i></button>
+                </form>
+            </div>
+
+            <div class="analyzer-results" id="resultsPanel" style="display: none;">
+                <div class="results-header">
+                    <h3>Intelligence Report</h3>
+                    <div class="streak-badge" id="streakBadge">🔥 3-Day Streak</div>
+                </div>
+                
+                <div class="scores-grid">
+                    <div class="score-card score-readiness">
+                        <svg class="circular-chart" viewBox="0 0 36 36">
+                            <path class="circle-bg"
+                                d="M18 2.0845
+                                a 15.9155 15.9155 0 0 1 0 31.831
+                                a 15.9155 15.9155 0 0 1 0 -31.831"
+                            />
+                            <path class="circle" id="scoreCircle"
+                                stroke-dasharray="0, 100"
+                                d="M18 2.0845
+                                a 15.9155 15.9155 0 0 1 0 31.831
+                                a 15.9155 15.9155 0 0 1 0 -31.831"
+                            />
+                            <text x="18" y="20.35" class="percentage" id="scoreText">0</text>
+                        </svg>
+                        <h4 style="margin-top: 1rem; font-weight: 600; color: var(--text-muted);">Readiness</h4>
+                    </div>
+                    
+                    <div class="score-card risk-card" style="display: flex; flex-direction: column; justify-content: center;">
+                        <div class="risk-text">
+                            <span class="risk-value" id="riskText">0%</span>
+                        </div>
+                        <div class="risk-meter">
+                            <div class="risk-fill" id="riskFill" style="width: 0%"></div>
+                        </div>
+                        <span class="risk-label">Craving Risk</span>
+                    </div>
+                </div>
+
+                <div class="recommendations">
+                    <div class="rec-item">
+                        <div class="rec-icon"><i class="fa-solid fa-utensils"></i></div>
+                        <div class="rec-content">
+                            <h4>Optimal Meal</h4>
+                            <p id="recMeal">Loading...</p>
+                        </div>
+                    </div>
+                    <div class="rec-item">
+                        <div class="rec-icon"><i class="fa-solid fa-arrow-right-arrow-left"></i></div>
+                        <div class="rec-content">
+                            <h4>Smart Swap</h4>
+                            <p id="recSwap">Loading...</p>
+                        </div>
+                    </div>
+                    <div class="rec-item">
+                        <div class="rec-icon"><i class="fa-solid fa-droplet"></i></div>
+                        <div class="rec-content">
+                            <h4>Hydration Protocol</h4>
+                            <p id="recHydration">Loading...</p>
+                        </div>
+                    </div>
+                    <div class="rec-item science-box">
+                        <div class="rec-icon"><i class="fa-solid fa-flask"></i></div>
+                        <div class="rec-content">
+                            <h4>The Science</h4>
+                            <p id="recReason">Loading...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="loadingState" class="loading-state" style="display: none;">
+                <div class="spinner"></div>
+                <h3 style="color: var(--text-main); margin-bottom: 0.5rem;">Analyzing Context</h3>
+                <p style="color: var(--text-muted);">Evaluating neural & metabolic factors...</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="section-header">
+            <h2>Trusted by <span class="text-accent">thousands</span></h2>
+            <p>See how NutriNudge AI is changing lives by preventing cravings before they happen.</p>
+        </div>
+        <div class="grid-3">
+            <div class="testimonial-card">
+                <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                <p class="quote">"It literally stopped me from eating a tub of ice cream at 1 AM. It knew I was stressed and suggested frozen grapes instead. Life changing."</p>
+                <div class="author">
+                    <div class="author-img">S</div>
+                    <div class="author-info">
+                        <h4>Sarah Jenkins</h4>
+                        <p>Lost 15 lbs</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                <p class="quote">"The UI is gorgeous and the AI coach is like having a nutritionist in my pocket 24/7. Worth every penny."</p>
+                <div class="author">
+                    <div class="author-img">M</div>
+                    <div class="author-info">
+                        <h4>Marcus Thorne</h4>
+                        <p>Athlete</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                <p class="quote">"I've tried every calorie tracker out there. NutriNudge is the only one that actually changes my behavior proactively."</p>
+                <div class="author">
+                    <div class="author-img">E</div>
+                    <div class="author-info">
+                        <h4>Elena R.</h4>
+                        <p>Busy Founder</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Chatbot Section -->
+    <section id="chat" class="chat-section">
+        <div class="section-header">
+            <h2>Your personal <span class="text-accent">AI Coach</span></h2>
+            <p>Have a question? Just ask.</p>
+        </div>
+        <div class="chat-container">
+            <div class="chat-header">
+                <div class="chat-avatar"><i class="fa-solid fa-robot"></i></div>
+                <div>
+                    <h3>NutriCoach AI</h3>
+                    <p class="status">Online | Ready to assist</p>
+                </div>
+            </div>
+            <div class="chat-window" id="chatWindow">
+                <div class="chat-msg ai-msg">
+                    <p>Hello! I'm your AI nutrition coach. Ask me about protein, hydration, sleep, or sugar cravings!</p>
+                </div>
+            </div>
+            <div class="chat-input-area">
+                <input type="text" id="chatInput" placeholder="Ask about nutrition..." autocomplete="off">
+                <button id="sendChatBtn"><i class="fa-solid fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Section -->
+    <section class="trust">
+        <p>Built with enterprise technology</p>
+        <div class="tech-stack">
+            <span><i class="fa-brands fa-python"></i> Flask</span>
+            <span><i class="fa-brands fa-html5"></i> HTML/CSS</span>
+            <span><i class="fa-brands fa-google"></i> Cloud Run</span>
+            <span><i class="fa-solid fa-brain"></i> Context Engine</span>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="logo">
+                <i class="fa-solid fa-leaf text-accent"></i> NutriNudge
+            </div>
+            <p>&copy; 2026 NutriNudge AI. Eat Better. Live Smarter.</p>
+        </div>
+    </footer>
+
+    <script src="../static/script.js"></script>
+</body>
+</html>
